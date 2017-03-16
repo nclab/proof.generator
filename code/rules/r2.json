@@ -1,0 +1,14 @@
+{
+    "actions": [
+        {
+            "type": "penalty",
+            "penalty_val": "1.2"
+        }
+    ],
+    "trigger": {
+        "type": "tactic_restriction",
+        "first_set": ["rewrite Zplus_mod."],
+        "second_set": ["rewrite Zplus_mod."],
+        "interval": 2
+    }
+}

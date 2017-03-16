@@ -1,0 +1,13 @@
+{
+    "actions": [
+        {
+            "type": "append_tactic",
+            "tactic": "rewrite IHn."
+        }
+    ],
+    "trigger": {
+        "type": "last_goal_contain",
+        "goal": "2 * sum (fun i : nat => a + i * b) n"
+    }
+}
+

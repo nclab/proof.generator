@@ -1,0 +1,12 @@
+{
+    "actions": [
+        {
+            "type": "append_tactic",
+            "tactic": "apply Ropp_0_le_ge_contravar."
+        }
+    ],
+    "trigger": {
+        "type": "last_goal_contain",
+        "goal": "0 >= - (x - y) ^ 2"
+    }
+}

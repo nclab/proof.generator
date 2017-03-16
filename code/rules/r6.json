@@ -1,0 +1,15 @@
+{
+    "actions": [
+        {
+            "type": "penalty",
+            "penalty_val": "1.8"
+        }
+    ],
+    "trigger": {
+        "type": "tactic_restriction",
+        "first_set": ["apply Rminus_le."],
+        "second_set": ["apply Rminus_le."],
+        "interval": 2
+    }
+}
+

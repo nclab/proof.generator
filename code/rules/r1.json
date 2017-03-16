@@ -1,0 +1,12 @@
+{
+    "actions": [
+        {
+            "type": "append_tactic",
+            "tactic": "change ((d (S n) + 10 * number n d) mod 3 = (d (S n) + sumdigits n d) mod 3)."
+        }
+    ],
+    "trigger": {
+        "type": "last_goal",
+        "goal": "number (S n) d mod 3 = sumdigits (S n) d mod 3"
+    }
+}

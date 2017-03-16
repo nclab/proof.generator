@@ -1,0 +1,41 @@
+trivial,rewrite plus_comm,rewrite mult_comm
+inversion H,inversion IHn,inversion IHk
+inversion H0,inversion H1
+eapply H,eapply H0,eapply H1,eapply IHn,eapply IHk
+exact H,exact H0,exact H1,exact IHn,exact IHk
+rewrite H,rewrite H0,rewrite H1,rewrite IHn,rewrite IHk
+assumption,reflexivity,intros,discriminate,left
+#distance
+rewrite distance_refl, rewrite distance_symm
+#Rgeom_define
+unfold dist_euc
+#ring
+ring_Rsqr,ring,ring_simplify
+#sqr
+rewrite Rsqr_neg,rewrite Rsqr_mult,rewrite Rsqr_plus,rewrite Rsqr_minus
+rewrite Rsqr_neg_minus,rewrite Rsqr_1,rewrite Rsqr_div,rewrite Rsqr_minus_plus
+rewrite Rsqr_plus_minus
+apply Rsqr_gt_0_0,apply Rsqr_pos_lt,apply Rsqr_eq_0,apply Rsqr_incr_0
+apply Rsqr_incr_0_var,apply Rsqr_incr_1,apply Rsqr_incrst_0,apply Rsqr_incrst_1
+apply Rsqr_neg_pos_le_0,apply Rsqr_neg_pos_le_1,apply neg_pos_Rsqr_le
+apply Rsqr_eq
+#sqrt
+rewrite sqrt_0,rewrite sqrt_1,rewrite sqrt_eq_0,rewrite sqrt_lem_0,rewrite sqrt_lem_1
+rewrite sqrt_def,rewrite sqrt_square,rewrite sqrt_Rsqr,rewrite sqrt_pow2
+rewrite sqrt_Rsqr_abs,rewrite Rsqr_sqrt,rewrite sqrt_mult_alt,rewrite sqrt_sqrt
+rewrite sqrt_mult,rewrite sqrt_lt_R0,rewrite sqrt_div_alt,rewrite sqrt_div
+apply sqrt_lt_0_alt,apply sqrt_lt_0,apply sqrt_lt_1_alt,apply sqrt_lt_1
+apply sqrt_le_0,apply sqrt_le_1_alt,apply sqrt_le_1,apply sqrt_inj,apply sqrt_less_alt
+apply sqrt_less,apply sqrt_more,apply sqrt_cauchy
+apply sqrt_pos,apply sqrt_positivity
+#basic real
+apply Rmult_lt_compat_r,apply Rmult_gt_compat_r,apply Rmult_gt_compat_l
+apply Rmult_le_compat_l,apply Rmult_le_compat_r,apply Rmult_ge_compat_l
+apply Rmult_ge_compat_r,apply Rmult_le_compat,apply Rmult_ge_compat
+apply Rmult_gt_0_lt_compat,apply Rmult_le_0_lt_compat,apply Rmult_lt_0_compat
+apply Rmult_gt_0_compat
+apply Rplus_le_le_0_compat,apply Rplus_lt_le_0_compat,apply Rplus_le_lt_0_compat
+apply Rle_0_sqr,apply Rplus_sqr_eq_0
+apply Rminus_le,apply Rge_le,apply Ropp_0_le_ge_contravar
+apply pow2_ge_0
+induction n

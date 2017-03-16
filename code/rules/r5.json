@@ -1,0 +1,14 @@
+{
+    "actions": [
+        {
+            "type": "append_tactic",
+            "tactic": "replace (- x ^ 2 + 2 * x * y - y ^ 2) with (-(x - y) ^2)."
+        }
+    ],
+    "trigger": {
+        "type": "last_goal_contain",
+        "goal": "- x ^ 2 + 2 * x * y - y ^ 2"
+    }
+}
+
+
